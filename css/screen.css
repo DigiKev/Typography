@@ -1,0 +1,155 @@
+/* =====================================================================
+// Typography sandbox
+// Created March 2010 - Kevin Rapley - kevin.rapley@yoo-zuh-buhl.co.uk
+// Main screen styles
+====================================================================== */
+
+
+/*  Style sheet glossary
+// ---------------------------------------------------------------------
+
+--- Colours ---
+RGB   0,  0,  0 | #000000 | Black
+RGB 255,255,255	| #ffffff | White
+
+--- Fonts ---
+"Helvetica Neue", Helvetica, Arial, Verdana, sans-serif
+
+--- Typographic scale ---
+48px, 36px, 24px, 18px, 16px, 14px, 12px, 10px
+
+--- Index ---
+=Globals
+=Structural
+
+// -------------------------------------------------------------------*/
+
+
+/* ---------------------------------------------------------------------
+// =Globals
+--------------------------------------------------------------------- */
+
+/* Resets
+--------------------------------------------------------------------- */
+
+* {margin: 0; border: none; padding: 0; vertical-align: baseline;}
+hr {display: none;}
+acronym, abbr {border-bottom: 1px dotted; cursor: help;}
+ul, ol {list-style: none;}
+dfn {font-style: normal; cursor: help;}
+
+/* Clear fixes
+--------------------------------------------------------------------- */
+
+#page:after {display: block; clear: both; height: 0; content: "\2003";}
+
+/* HTML rundown
+--------------------------------------------------------------------- */
+
+body {margin-top: -2px; padding-top: 6em; font: normal .75em/1.5 Frutiger, Univers, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body.grid-on {background: url(/typography/graphics/lines.gif);}
+div {position: relative;}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {font: normal 1em/1.5 Cambria, Constantia, Georgia, "Times New Roman", "Times Roman", serif;}
+
+h1 {font-size: 4em; line-height: 1.292; margin: .375em 0 .958em;} /* 48px */
+	body.script-on h1.lines-2 {margin-bottom: .791em;}
+	body.script-on h1.lines-3 {margin-bottom: .624em;}
+	body.script-on h1.lines-4 {margin-bottom: .457em;}
+h2 {font-size: 3em; line-height: 1.278; margin: .5em 0 1.222em;} /* 36px */
+	body.script-on h2.lines-2 {margin-bottom: .945em;}
+	body.script-on h2.lines-3 {margin-bottom: .667em;}
+	body.script-on h2.lines-4 {margin-bottom: .889em;}
+h3 {font-size: 2em; line-height: 1.333; margin: .75em 0 .917em;} /* 24px */
+	body.script-on h3.lines-2 {margin-bottom: 1.083em;}
+	body.script-on h3.lines-3 {margin-bottom: 1.25em;}
+	body.script-on h3.lines-4 {margin-bottom: 1.417em;}
+h4 {font-size: 1.5em; line-height: 1.333; margin: 1em 0 .667em;} /* 18px */
+	body.script-on h4.lines-2 {margin-bottom: 1.333em;}
+	body.script-on h4.lines-3 {margin-bottom: 1em;}
+	body.script-on h4.lines-4 {margin-bottom: .667em;}
+h5 {font-size: 1.333em; line-height: 1.25; margin: 1.125em 0 1em;} /* 16px */
+	body.script-on h5.lines-2 {margin-bottom: .875em;}
+	body.script-on h5.lines-3 {margin-bottom: .75em;}
+	body.script-on h5.lines-4 {margin-bottom: .625em;}
+h6 {font-size: 1.167em; line-height: 1.286; margin: 1.286em 0;} /* 14px */
+
+p {text-indent: 1.5em;}
+abbr.amp {border: none; font: italic 100%/0.0 "Goudy Old Style", "Palatino", "Book Antiqua", serif; color: #666; cursor: auto;}
+
+/* Quotations
+--------------------------------------------------------------------- */
+	
+/* Standard quotes */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+q:before { content: open-quote; }
+q:after  { content: close-quote; }
+	
+/* Safari support */
+q:before   { content: '\201C'; }
+q:after    { content: '\201D'; }
+q q:before { content: '\2018'; }
+q q:after  { content: '\2019'; }
+	
+/* blockquotes */
+blockquote * { quotes: none; }
+blockquote > *:before { content: '\201C'; }
+blockquote > *:after  { content: '\201D'; }
+blockquote q:before   { content: '\2018'; }
+blockquote q:after    { content: '\2019'; }
+
+/* ---------------------------------------------------------------------
+// =Structural
+--------------------------------------------------------------------- */
+
+#panel {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	border-bottom: 0.083em solid #666;
+	padding: 1.5em 0 1.417em;
+	background: #ccc;
+	}
+	
+#panel ul {
+	margin-left: 1.5em;
+	}
+	
+#panel li {
+	display: block;
+	float: left;
+	margin-right: .75em;
+	}
+	
+#panel a {
+	display: block;
+	padding: .75em 1.5em;
+	background: #eee;
+	}
+	
+body.grid-on #panel a#grid:after {content: " off ";}
+body.grid-off #panel a#grid:after {content: " on ";}
+
+body.script-on #panel a#script:after {content: " off ";}
+body.script-off #panel a#script:after {content: " on ";}
+
+#page {
+	margin: 0 auto;
+	width: 960px;
+	}
+	
+div.column {
+	float: left;
+	margin: 0 10px;
+	width: 460px;
+	}
+	
+div.featured {
+	margin: 1.5em 0;
+	border: 0.083em solid black;
+	padding: .667em 1.5em 2.167em 1.5em;
+	background: #ddd;
+	}

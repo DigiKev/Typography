@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+      <title>Typography sandbox</title>
+      <link href="/typography/css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+      <script type="text/javascript" src="/scripts/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="/typography/scripts/panel.js"></script>
+      <script type="text/javascript" src="/typography/scripts/typography.js"></script>
+      <script type="text/javascript" src="/typography/scripts/jqWidont.js"></script>
+    </head>
+    <body class="grid-on script-on">
+      <div id="panel">
+        <ul>
+          <li><a href="#" id="grid">Turn gridlines</a></li>
+          <li><a href="#" id="script">Turn script</a></li>
+        </ul>
+      </div>
+      <div id="page">
+        <div class="column">
+          <h1>A vertical rhythm with a typographers scale &amp; sensible line heights</h1>
+          <p>
+            Enlightened by Richard Rutter and Mark Boulton&rsquo;s lectures and writings on vertical rhythm, I began to experiment with producing web pages that step to a beat. I was soon dismayed when I found using large font sizes for headings would need to be set on line heights in multiples of the base font size line height. The leading between headings would either be too tight or too loose. If I were to set the headings to a line height outside the multiples of the base line height, the proceeding paragraphs would fall out of sync. I seeked a dynamic way to use large font sizes, that have their own line height and yet allow restful placement of proceeding paragraphs back on the baseline.
+          </p>
+          <p>
+            With the development prowess of Andy MacDonald, I was able to describe to him my requirements as he tweaked and fettled together a script that works on the jQuery JavaScript library. The script is given the values of how many characters exist in a line of text at the given font sizes and then applies a class of lines-(x), where x is the number of lines. New margins may then be applied on a per line basis to elegantly place the proceeding paragraphs back in beat. I don&rsquo;t forsee the headings that I use to ever span more than four lines, so the CSS statements do not grow unwieldly.
+          </p>
+          <h2>A dashboard to show how the script works</h2>
+          <p>
+            There is nothing like a good demonstration to replace a thousand words. In this working example I have provided a dashboard panel with buttons to turn off and on both the gridlines and the effects of the script upon the headings. Please take a moment to toggle the buttons on and off to witness exactly what the script achieves.
+          </p>
+          <h3>Automate adding a class to ampersands to make them look lovely</h3>
+          <p>
+            Dan Cederholm wrote some time a go about the importance of using the best available ampersands in heads and titles An ampersand is one of these &lsquo;&amp;&rsquo; if you weren&rsquo;t sure. We are sing jQuery here to locate these beautiful characters, wrap them in a tag with a class if they are in a header, so we can style them to be even prettier.
+          </p>
+          <h4>You won&rsquo;t find any widows mourning here</h4>
+          <p>
+            A typographic widow is the term used to refer to a single word on a line at the end of a paragraph. A widow is considered poor typography because it leaves too much white space between paragraphs or at the bottom of a page. Using Dave Cardwell&rsquo;s excellent script&nbsp;&ndash;&nbsp;jqWidon&rsquo;t&nbsp;&ndash;&nbsp;we are able to add a non-breaking space between the final and penultimate words.
+          </p>
+        </div>
+        <div class="column">
+          <h2>The typographer&rsquo;s scale adds measured increments, harmonious to one another</h2>
+          <p>
+            The scale was devised by some very clever typographer&rsquo;s in the 16<sup>th</sup> Century, making it easier to set type. The scale used in this particular example page is &lsquo;<strong>10px, 12px, 14px, 18px, 24px, 36px, 48px</strong>&rsquo;
+          </p>
+          
+          <div class="featured">
+            <h3>Featured item inside a box</h3>
+            <p>
+              The vertical measurements of this box are multiples of 18px and have top and bottom margins of 18px. It takes account of the 1px border too. The paragraphs proceeding this box rest back on the baseline, maintaining the vertical rhythm of the page.
+            </p>
+          </div>
+          <h4>Lorem ipsum dolor sit amet mauris tempus placerat dui id placerat. Aliquam semper scelerisque accumsan. Quisque enim est semper scelerisque accumsan</h4>
+          <p>
+            Mauris tempus placerat dui id placerat. Aliquam semper scelerisque accumsan. Quisque enim est, interdum in adipiscing non, condimentum quis quam. Cras ullamcorper varius consequat. Proin sed nisi et tortor condimentum egestas. Vivamus sit amet rhoncus felis. Aenean venenatis dignissim urna sit amet dapibus. Phasellus consectetur turpis eu velit iaculis nec laoreet nisi aliquet. Proin tempor, dolor id faucibus tempus, nisl purus sagittis mauris, vel vulputate leo tortor non sapien. Nulla in urna nec dui tristique posuere. 
+          </p>
+          <h5>Lorem ipsum dolor sit amet</h5>
+          <p>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque iaculis, neque sit amet interdum dapibus, tortor ante tempus odio, vitae mattis urna nibh non libero. Vivamus varius suscipit nibh, eget pellentesque sapien dignissim elementum. Donec sem est, dictum eu imperdiet nec, rhoncus ut eros. Donec sollicitudin felis a sapien porttitor vitae tempor est sodales. Phasellus tincidunt fringilla sapien. Nam et erat sed tortor scelerisque vulputate. Morbi in nisi vel metus varius volutpat. Curabitur nisl enim, egestas a tristique quis, vulputate in tortor. Cras lacinia diam sit amet libero tincidunt varius. Nullam eu lorem id lorem vulputate euismod sit amet eu sapien. Etiam ut venenatis nulla. Vestibulum dolor nisi, mattis a condimentum nec, suscipit volutpat odio. Aenean lorem sem, accumsan ac consectetur non, lacinia non sapien. Integer interdum lectus nec libero commodo in laoreet mauris dapibus. Suspendisse potenti.
+          </p>
+          <h6>Lorem ipsum dolor sit amet</h6>
+          <p>
+            Etiam pulvinar scelerisque volutpat. Vivamus blandit quam ut leo auctor congue. Morbi molestie mi et mauris scelerisque posuere. Nam commodo sollicitudin rutrum. Maecenas luctus nunc gravida turpis lacinia commodo. Phasellus pretium eros orci, ac lacinia nisl. Maecenas aliquam enim hendrerit ipsum condimentum rutrum. Suspendisse metus mi, viverra quis aliquam quis, fringilla ut est. Duis adipiscing rutrum nisl in rhoncus. Proin eu erat at lorem porta pharetra id vitae purus. Vivamus viverra cursus auctor. Pellentesque sagittis mauris in leo ornare scelerisque. Donec vitae purus tellus. Suspendisse a massa condimentum odio ornare elementum. Vivamus tincidunt posuere dolor, quis eleifend turpis dictum et. Suspendisse justo nunc, sodales non congue sed, pharetra eu urna.
+          </p>
+        </div>
+      </div>
+      <script type="text/javascript">
+			// <![CDATA[
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			// ]]>
+			</script>
+			<script type="text/javascript">
+			// <![CDATA[
+				try {
+					var pageTracker = _gat._getTracker("UA-3412003-2");
+					pageTracker._trackPageview();
+				}
+				catch(err) {}
+			// ]]>
+			</script>
+    </body>
+  </html>
